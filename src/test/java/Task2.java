@@ -84,6 +84,20 @@ public class Task2 {
 		WebElement dest = driver.findElement(By.xpath("(//div[@class='list-header-target js-editing-target'])[2]"));
 		act.dragAndDrop(source, dest).perform();
 		
+		WebElement xycordi = driver.findElement(By.xpath("//span[@class='list-card-title js-card-name']//child::span[contains(text(),'#2')]"));
+		System.out.println("X-Coordinate:" +xycordi.getRect().getX());
+		System.out.println("Y-Coordinate:" +xycordi.getRect().getY());
+		
+		WebElement logClk = driver.findElement(By.xpath("//span[@class='p6oJr7SHjK+vLr aqePx81u4BGHTH Glb3QqRGpd64YB']"));
+		act.moveToElement(logClk).click().perform();
+		Thread.sleep(3000);
+		WebElement logButClk = driver.findElement(By.xpath("//span[contains(text(),'Log out')]"));
+		act.moveToElement(logButClk).click().perform();
+		
+		WebElement logCnfButClk = driver.findElement(By.xpath("//span[@class='css-178ag6o']"));
+		act.moveToElement(logCnfButClk).click().perform();
+		
+		
 	}
 
 }
