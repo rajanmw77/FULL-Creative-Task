@@ -40,21 +40,6 @@ public class Task2 {
 		WebElement boardName = driver.findElement(By.xpath("//input[@type='text']"));
 		boardName.sendKeys("Task");
 		
-		
-//		WebElement visib = driver.findElement(By.xpath("(//div[@class='J+c2IiaNOYgZBB css-ufz0vj-control'])[2]"));
-//		act.moveToElement(visib).click().perform();
-//		Thread.sleep(3000);
-		
-//		Select s = new Select(visib);
-//		s.selectByValue(")
-//		WebElement publicClk = driver.findElement(By.xpath("//div[@class=' css-1og2rpm']"));
-//		act.moveToElement(publicClk);
-//		
-//		Thread.sleep(3000);
-//		
-//		WebElement publicAlt = driver.findElement(By.id("//button[contains(text(),'Yes, make board public')]"));
-//		act.moveToElement(publicAlt).click().perform();
-		
 		WebElement submitClk = driver.findElement(By.xpath("//button[@data-testid='create-board-submit-button']"));
 		act.moveToElement(submitClk).click().perform();
 		
